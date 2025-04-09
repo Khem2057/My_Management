@@ -47,94 +47,43 @@ const Sidebar = () => {
     <div className="flex h-screen bg-gray-100 ">
       {/* Sidebar */}
         <div className={`${isSidebarOpen ? 'flex' : 'hidden'} md:flex md:flex-shrink-0`}>
-            <div className="flex flex-col w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out mt-20">
-                {/* Sidebar header with toggle button */}
-                {/* <div className="flex items-center justify-between h-16 px-4 bg-indigo-900">
-                    <h1 className="text-xl font-bold text-white">Sidebar</h1>
-                    <button 
-                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                    className="md:hidden text-white focus:outline-none"
-                    >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                    </button>
-                    </div> */}
+            <div className=" flex flex-col  w-20 md:w-64 bg-gray-800 text-white transition-all duration-300 ease-in-out mt-20 ">
                
                 {/* Sidebar navigation */}
-                <div className="flex flex-col flex-grow px-4 py-4 overflow-y-auto">
+                <div className="flex flex-col flex-grow px-3 py-4 overflow-y-auto">
                     <nav className="flex-1 space-y-2">
-                        {navItems.map((item) => (
+                    {navItems.map((item) => (
                             <button
                                 key={item.name}
-                                
                                 onClick={() => {
                                     setActiveItem(item.name)
                                     // Inertia.visit(item.path)
                                 }}
                                 className={`flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg group ${
                                     activeItem === item.name
-                                    ? 'text-white bg-indigo-900'
-                                    : 'text-indigo-200 hover:bg-indigo-700 hover:text-white'
+                                        ? 'text-white bg-indigo-900'
+                                        : 'text-indigo-200 hover:bg-indigo-700 hover:text-white'
                                 }`}
-                                >
-                                {item.icon}
-                                {item.name}
-                                {/* {item.path} */}
-                                {item.badge && (
-                                    <span className="ml-auto inline-block px-2 py-0.5 text-xs font-semibold text-indigo-800 bg-indigo-200 rounded-full">
-                                    {item.badge}
-                                    </span>
-                                )}
+                            >
+                                <span className="mr-2">{item.icon}</span>
+                                <span className="hidden md:inline">{item.name}</span>
+
+                                
+                                  {item.badge && (
+                                      <span className="hidden md:inline ml-auto inline-block px-2 py-0.5 text-xs font-semibold text-indigo-800 bg-indigo-200 rounded-full">
+                                          {item.badge}
+                                      </span>
+                                  )}
+                                
+                                
                             </button>
                         ))}
                     </nav>
-                    
-                    {/* Bottom section */}
-                    {/* <div className="mt-auto">
-                        <div className="pt-4 mt-4 border-t border-indigo-700">
-                            <div className="flex items-center px-4">
-                                <img 
-                                    className="w-10 h-10 rounded-full" 
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" 
-                                    alt="User profile" 
-                                />
-                                <div className="ml-3">
-                                    <p className="text-sm font-medium text-white">John Doe</p>
-                                    <button className="text-xs font-medium text-indigo-200 hover:text-white">
-                                    View profile
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>
       
-        {/* Main content */}
-        {/* <div className="flex flex-col flex-1 overflow-hidden"> */}
-            {/* Mobile header with toggle button */}
-            {/* <div className="flex items-center h-16 px-4 bg-white border-b border-gray-200 md:hidden">
-                <button 
-                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                    className="text-gray-500 focus:outline-none"
-                >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <h1 className="ml-4 text-lg font-medium text-gray-800">{activeItem}</h1>
-            </div> */}
-            
-            {/* Your main content goes here */}
-            {/* <div className="flex items-center justify-center h-full p-4">
-                <div className="p-8 bg-white rounded-lg shadow">
-                    <h2 className="text-2xl font-semibold text-gray-800">{activeItem} Content</h2>
-                    <p className="mt-2 text-gray-600">This is the main content area for {activeItem}.</p>
-                </div>
-            </div>
-        </div> */}
+        
     </div>
     );
 };
