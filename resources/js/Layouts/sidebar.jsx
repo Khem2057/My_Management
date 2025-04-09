@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Inertia } from '@inertiajs/inertia';
 
 
 
@@ -57,7 +58,7 @@ const Sidebar = () => {
                                 key={item.name}
                                 onClick={() => {
                                     setActiveItem(item.name)
-                                    // Inertia.visit(item.path)
+                                    Inertia.visit(item.path)
                                 }}
                                 className={`flex items-center w-full px-4 py-2 text-sm font-medium rounded-lg group ${
                                     activeItem === item.name

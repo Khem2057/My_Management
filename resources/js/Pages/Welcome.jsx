@@ -1,4 +1,5 @@
 import { Head, Link } from '@inertiajs/react';
+import Crousel from '@/Components/Crousel';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -25,10 +26,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
                         <header className="grid grid-cols-3 items-center gap-2 py-10 lg:grid-cols-3">
                             <div className="flex lg:col-start-1 lg:justify-start">
-                                <p className=" rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white font-bold "> 
-                                    MY MANAGEMENT SYSTEM
-                                </p>
-                                
+                                <Link
+                                    href="/">
+                                        <p className=" rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white font-bold "> 
+                                            MY MANAGEMENT SYSTEM
+                                        </p>
+                                </Link>
                             </div>
                             <div className="flex lg:col-start-2 lg:justify-center">
                                 {/* <svg
@@ -43,7 +46,10 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     />
                                 </svg> */}
 
-                                <img src="/logos/trans_480x480.png" alt="logo" className="h-[100px] w-[100px] [filter:drop-shadow(0_0_8px_white)_drop-shadow(0_0_15px_white)]"/>
+                                <Link
+                                    href="/">
+                                    <img src="/logos/trans_480x480.png" alt="logo" className="h-[100px] w-[100px] [filter:drop-shadow(0_0_8px_white)_drop-shadow(0_0_15px_white)]"/>
+                                </Link>
                             </div>
                             <nav className="-mx-3 flex flex-1 justify-end">
                                 {auth.user ? (
@@ -76,17 +82,18 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </div>
 
                         <main className="mt-6">
-                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 ">
-                                MY MANAGEMENT SYSTEM
-                                <div className="h-100 w-full overflow-hidden rounded-lg bg-white shadow-md dark:bg-black/50 ">
+                            
+                            <Crousel />
 
-                                </div>
+                            <div className="flex justify-center h-96 "> 
+                                <span className=' mt-10 text-center text-xl md:text-2xl lg:text-3xl font-bold text-black dark:text-white '>
+                                    MY MANAGEMENT SYSTEM
+                                </span>
                             </div>
-                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 ">
-                                MY MANAGEMENT SYSTEM
-                                <div className="h-100 w-full overflow-hidden rounded-lg bg-white shadow-md dark:bg-black/50 ">
-
-                                </div>
+                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 "> 
+                                <span className=' mt-10 text-center text-2xl font-bold text-black dark:text-white/70 '>
+                                    MY MANAGEMENT SYSTEM
+                                </span>
                             </div>
                             
                         </main>
