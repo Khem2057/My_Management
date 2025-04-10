@@ -6,6 +6,7 @@ import { Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 import Sidebar from './sidebar';
 
+
 export default function AuthenticatedLayout({ header, children }) {
     const user = usePage().props.auth.user;
 
