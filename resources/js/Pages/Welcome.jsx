@@ -1,5 +1,6 @@
 import { Head, Link } from '@inertiajs/react';
 import Crousel from '@/Components/Crousel';
+import TypeAnimation from '@/Components/TypeAnimation';
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const handleImageError = () => {
@@ -81,7 +82,22 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                         </div>
 
-                        <main className="mt-6">
+                        <main className="my-12">
+
+                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 my-12 pb-10"> 
+                                <div className="flex  items-center mb-40">
+                                    <div>
+                                        <TypeAnimation />
+                                        <div className='pt-2 text-justify text-white'>
+                                            Stay on top of your goals with our all-in-one management tool. Effortlessly organize tasks, manage your time, track your budget and expenses, and analyze your progress with detailed reports.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="/dhyaan.jpeg" alt="img" />
+                                </div>
+                                
+                            </div>
                             
                             <Crousel />
 
