@@ -104,7 +104,7 @@ const Sidebar = () => {
                                 
                             </button>
                         )
-                        })}`
+                        })}
                     </nav>
                     <div className='flex justify-center items-center mt-auto mb-1'>
                       MMS Version 1.0.0

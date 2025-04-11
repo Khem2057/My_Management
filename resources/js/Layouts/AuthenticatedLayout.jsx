@@ -182,7 +182,7 @@ export default function AuthenticatedLayout({ header, children }) {
                 <div>
                     <Sidebar />
                 </div>
-                <div className='w-full mt-16 h-[calc(100vh-4rem)] overflow-auto bg-gray-200'>
+                <div className='w-full mt-20 h-[calc(100vh-5rem)] overflow-auto bg-gray-200'>
                     <main>{children}</main>
                 </div>
                 

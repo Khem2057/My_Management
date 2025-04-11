@@ -24,17 +24,17 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     src="https://laravel.com/assets/img/welcome/background.svg"
                 /> */}
                 <div className="relative flex min-h-screen flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                    <div className="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                        <header className="grid grid-cols-3 items-center gap-2 py-10 lg:grid-cols-3">
+                    <div className="relative w-full ">
+                        <header className="grid grid-cols-3 items-center gap-2 py-2 lg:grid-cols-3 max-w-2xl px-6 lg:max-w-7xl mx-auto">
                             <div className="flex lg:col-start-1 lg:justify-start">
                                 <Link
                                     href="/">
-                                        <p className=" rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white font-bold "> 
-                                            MY MANAGEMENT SYSTEM
+                                        <p className=" rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white font-bold text-3xl"> 
+                                            MMS
                                         </p>
                                 </Link>
                             </div>
-                            <div className="flex lg:col-start-2 lg:justify-center">
+                            <div className="flex lg:col-start-2 justify-center ">
                                 {/* <svg
                                     className="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]"
                                     viewBox="0 0 62 65"
@@ -78,44 +78,94 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 )}
                             </nav>
                         </header>
-                        <div className='border-b border-gray-100 bg-white'>
+                        <div className='border-b border-gray-500 bg-white'>
 
                         </div>
 
-                        <main className="my-12">
+                        <main className="my-6 max-w-2xl px-6 lg:max-w-7xl mx-auto">
 
-                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 my-12 pb-10"> 
-                                <div className="flex  items-center mb-40">
-                                    <div>
+                            <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-auto  mt-6 "> 
+                                <div className="flex  items-center pb-4 sm:pb-40">
+                                    <div >
                                         <TypeAnimation />
-                                        <div className='pt-2 text-justify text-white'>
+                                        <div className='pt-4 sm:pt-2 text-justify text-white'>
                                             Stay on top of your goals with our all-in-one management tool. Effortlessly organize tasks, manage your time, track your budget and expenses, and analyze your progress with detailed reports.
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <img src="/dhyaan.jpeg" alt="img" />
+                                <div >
+                                    <img src="/dhyaan.jpeg" alt="img" className=' object-cover '/>
                                 </div>
                                 
+                            </div>
+
+                            <div className="flex justify-center h-24 "> 
+                                <span className=' mt-10 text-center text-xl md:text-2xl  font-bold text-black dark:text-white '>
+                                    MY MANAGEMENT SYSTEM
+                                </span>
                             </div>
                             
                             <Crousel />
 
-                            <div className="flex justify-center h-96 "> 
-                                <span className=' mt-10 text-center text-xl md:text-2xl lg:text-3xl font-bold text-black dark:text-white '>
-                                    MY MANAGEMENT SYSTEM
-                                </span>
-                            </div>
+                            
                             <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 h-96 "> 
-                                <span className=' mt-10 text-center text-2xl font-bold text-black dark:text-white/70 '>
+                                <span className=' mt-10 text-center text-lg md:text-xl lg:text-2xl font-bold text-black dark:text-white/70 '>
                                     MY MANAGEMENT SYSTEM
                                 </span>
                             </div>
                             
                         </main>
 
-                        <footer className="py-16 text-center text-sm text-black dark:text-white/70">
-                            Laravel v{laravelVersion} (PHP v{phpVersion})
+                        <footer className="pt-16  text-center text-sm text-black dark:text-white/70">
+                            <div className='border-b border-gray-500 bg-white'> </div>
+                            <div className='p-16 h-auto flex justify-around'>
+                               
+                                <div className='w-1/3 '>
+                                    <img src="/logos/trans_480x480.png" alt="logo" height="90px" width="90px" className="[filter:drop-shadow(0_0_8px_white)_drop-shadow(0_0_15px_white)]"/>
+                                    <div className='pt-4 text-start'>
+                                        <div className=' text-2xl'>
+                                            MY MANAGEMENT SYSTEM
+                                        </div>
+                                        <p className='pt-1 text-base'>All-in-one solution for smart planning, productivity, and progress tracking.</p>
+                                    </div>
+                                   
+                                    
+                                </div>
+                                <div className='flex flex-col gap-4 text-md text-left'>
+                                    <p className='text-xl'>Links</p>
+                                    <Link href="">About</Link>
+                                    <Link href="">Contact</Link>
+                                    <Link href="">Review</Link>
+                                    <Link href="">Help</Link>
+                                </div>
+                                <div className='flex flex-col gap-4 text-md text-left'>
+                                    <p className='text-xl'>Company</p>
+                                    <Link href="">About</Link>
+                                    <Link href="">Blog</Link>
+                                    <Link href="">Join Us</Link>
+                                </div>
+                                <div className='flex flex-col gap-4 text-md text-left'>
+                                    <p className='text-xl '>Social links</p>
+                                    <Link href="">Facebook</Link>
+                                    <Link href="">Twetter</Link>
+                                    <Link href="">Instagram</Link>
+                                    <Link href="">Tiktok</Link>
+                                    
+                                </div>
+                            </div>
+                            <div className='border-b border-gray-500 bg-white'></div>
+                            <div className='py-8 px-20 flex justify-between text-white'>
+                                <div>
+                                    2025 © All rights reserved
+                                </div>
+                                <div className='flex justify-center gap-4 '>
+                                    <Link href="">Terms of Service</Link>
+                                    <Link href="">Privacy Policy</Link>
+                                    <Link href="">Cookies</Link>
+                                </div>
+                                {/* Laravel v{laravelVersion} (PHP v{phpVersion}) */}
+                            </div>
+                            
                         </footer>
                     </div>
                 </div>
